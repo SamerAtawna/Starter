@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script> 
+$(document).ready(function(){
+    $("#btnsettings").click(function(){
+        $("#sub").slideToggle("fast");
+    });
+});
+            
+            $(document).ready(function(){
+    $("#btnLogin").click(function(){
+        $("#loginBack").slideToggle("fast");
+    });
+});
+                $(document).ready(function(){
+    $("#close").click(function(){
+        $("#loginBack").slideUp("slow");
+    });
+});
+            
+            
+</script>
+ 
+        <meta charset="UTF-8">
+       
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Quicksand');
+            @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+            body
+            {
+                margin-top: 0;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        .nav
+            {
+                       
+                z-index: -1;
+                width:100%;
+                height: 100px;;
+                margin-right: 0;
+                margin-left: 0;
+                margin-top: 0;
+                
+                background: linear-gradient(#536976, #292E49);
+            }
+        .title
+            {
+                position:absolute;
+                font-family: 'Quicksand', sans-serif;
+                color:#ecf0f1;
+                font-size: 28px;
+            }
+            .menu
+            {
+                z-index: 1;
+                align-self: right;
+                right:100px;
+                bottom: 0px;
+                padding-top: 70px;
+      
+            }
+             .submenu
+            {
+                
+            position: absolute;
+                width:100%;
+                height:40%;
+                background-image: url(bgcld.jpg);
+                background-position:bottom;
+                display: none;
+                color:white;
+                text-align: center;
+                font-family: fantasy;
+                font-size: 32px;
+               
+                
+
+        
+          
+            }
+  
+            .btn
+            {
+                margin-right:5px;
+                float: right;
+                bottom:0px;
+                background-color:aliceblue;
+                opacity:0.5;
+                width:80px;
+                height: 30px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color:black;
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                 -webkit-transition: box-shadow 0.5s; 
+                   
+                
+                
+            }
+                      .btnMenu
+            {
+                margin-right:5px;
+                float: right;
+                bottom:0px;
+                background-color:aliceblue;
+                opacity:0.5;
+                width:80px;
+                height: 30px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color:black;
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                 -webkit-transition: box-shadow 0.5s; 
+                   
+                
+                
+            }
+                      .btnAbout
+            {
+                margin-right:5px;
+                float: right;
+                bottom:0px;
+                background-color:aliceblue;
+                opacity:0.5;
+                width:80px;
+                height: 30px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color:black;
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                 -webkit-transition: box-shadow 0.5s; 
+                   
+                
+                
+            }
+                      .btnOrder
+            {
+                margin-right:5px;
+                float: right;
+                bottom:0px;
+                background-color:aliceblue;
+                opacity:0.5;
+                width:80px;
+                height: 30px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color:black;
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                 -webkit-transition: box-shadow 0.5s; 
+                   
+                
+                
+            }
+            .btn:hover
+            {
+                cursor: pointer;
+                box-shadow: 20px 20px 50px 15px white;
+                display:block;
+                
+         
+                
+            }
+
+               .btnMenu:hover
+            {
+                cursor: pointer;
+                box-shadow: 20px 20px 50px 15px white;
+                display:block;
+                
+         
+                
+            }
+               .btnOrder:hover
+            {
+                cursor: pointer;
+                box-shadow: 20px 20px 50px 15px white;
+                display:block;
+                
+         
+                
+            }
+               .btnAbout:hover
+            {
+                cursor: pointer;
+                box-shadow: 20px 20px 50px 15px white;
+                display:block;
+                
+         
+                
+            }
+         
+            .imgLogin
+            {
+                cursor: pointer;
+                padding-left: 10px;
+                height: 40px;
+              position: absolute;
+                width:10;
+                z-index: -1;
+
+                
+            }
+            
+            
+            .loginMenu
+            {
+                position: absolute;
+                height:50%;
+                width:50%;
+                background-color: white;
+                margin-left: 450px;
+                margin-top:200px;
+                border-radius: 30px;
+                border-bottom-style:solid;
+                border-color: red;
+                box-shadow: 0.5px 1px 15px ;
+              padding-left: 50px;
+            padding-top: 40px;
+                font-size: 28px;
+               font-family: 'Quicksand', sans-serif;
+             
+                
+                
+            }
+            .loginBack
+            {
+                position: fixed;
+                height: 100%;
+                width:100%;
+                background-color: black;
+                background-color: rgba(0,0,0,0.4);
+                z-index: 10;
+                display: none;
+               
+
+            }
+            .imgUser
+            {
+                height: inherit;
+                border-radius: 1900px;
+            }
+
+        .tblLogin
+            {
+                position: relative;
+                float: right;
+                right:200px;
+                top:150px;
+            }
+            .txt
+            {
+                height:30px;
+                margin:15px;
+                border-radius: 5px;
+                border-style: solid;
+                border-bottom-width: thin;
+                font-size: 20px;
+            }
+            .a
+            {
+                font-size: 48px;
+            }
+            .btnSubmit
+            {
+                position: relative;
+                    left:670px;
+                top:90px;
+                background-color: antiquewhite;
+                    width:130px;
+                text-align: center;
+                border-radius: 5px;
+                padding:5px;
+                cursor: pointer;
+            }
+      
+            .xcls
+            {
+                position: relative;
+                height:30px;
+                width: 30px;
+                float: right;
+                right:50px;
+                cursor: pointer;
+            }
+            
+        </style>
+        
+    </head>
+
+    <body>
+ 
+        <div class="nav">   
+            
+                <div class="title">
+                Apple Systems inc.
+                </div>
+          
+                
+                <div class="menu">
+                   <div class="btn" id="btnsettings">
+                  
+                    Settings
+                    </div>
+                    <div class="btnMenu">
+                    Menu 
+                    </div>
+                    <div class="btnOrder">
+                    Order 
+                    </div>
+                    <div class="btnAbout">
+                    About Us 
+                    </div>
+            
+                </div>
+        </div>
+        <div class="submenu" id="sub">
+            <h2>Settings</h2>
+            <br>1 2 3 
+        </div>
+        
+        <div class="login"  id="btnLogin">
+               <img src="login.svg" class="imgLogin">
+            </div>
+        <div class="loginBack" id="loginBack">
+           
+            <div class="loginMenu">
+            <img src=x.png class="xcls" id="close">
+        <center class="a">Login</center>
+                <img src="user.jpg" class="imgUser">
+             
+                 <table class="tblLogin">
+                <tr>
+                    <td>User Name</td><td><input type="text" class="txt"></td>
+                     </tr>
+                              <tr>
+                    <td>Password</td><td><input type="text" class="txt"></td>
+                     </tr>
+                </table>
+                <div class="btnSubmit">
+                Login
+                </div>
+            </div>
+         </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
