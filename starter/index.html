@@ -1,41 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<<<<<<< HEAD
+
+
+
         <script> 
-$(document).ready(function(){
+            $(document).ready(function(){
     $("#btnsettings").click(function(){
         $("#sub").slideToggle("fast");
     });
 });
-            
-            $(document).ready(function(){
-    $("#btnLogin").click(function(){
-        $("#loginBack").slideToggle("fast");
-    });
-});
-                $(document).ready(function(){
-    $("#close").click(function(){
-        $("#loginBack").slideUp("slow");
-    });
-});
-            
-=======
         
-
-        <script> 
                 $(document).ready(function(){
         $("#btnli").click(function(){
             $("#lst").slideToggle("fast");
         });
     });
-    $(document).ready(function(){
-        $("#btnsettings").click(function(){
-            $("#sub").slideToggle("fast");
-        });
-    });
+   
 
                 $(document).ready(function(){
         $("#btnLogin").click(function(){
@@ -48,8 +30,7 @@ $(document).ready(function(){
         });
     });
 
->>>>>>> Added date and background selector
-            
+
 </script>
  
         <meta charset="UTF-8">
@@ -58,10 +39,8 @@ $(document).ready(function(){
         <style>
             @import url('https://fonts.googleapis.com/css?family=Quicksand');
             @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-<<<<<<< HEAD
-=======
             @import url('https://fonts.googleapis.com/css?family=Imprima');
->>>>>>> Added date and background selector
+
             body
             {
                 margin-top: 0;
@@ -235,15 +214,15 @@ $(document).ready(function(){
                 cursor: pointer;
                 padding-left: 10px;
                 height: 40px;
-<<<<<<< HEAD
+
               position: absolute;
                 width:10;
                 z-index: -1;
-=======
+
                 position: absolute;
                 width:10;
                 z-index:1;
->>>>>>> Added date and background selector
+
 
                 
             }
@@ -329,22 +308,8 @@ $(document).ready(function(){
                 right:50px;
                 cursor: pointer;
             }
-<<<<<<< HEAD
-            
-=======
-            .gallery .lst
-            {
-                z-index: -1;
-                position: absolute;
-                margin-top: 100px;
-                left:100px;
-                list-style: none;
-                font-family: 'Imprima';
-                
-                
-                
 
-            }
+    
             .btnarr
             {
                 
@@ -355,7 +320,7 @@ $(document).ready(function(){
             }
          
      
-            .lst{
+            .lst {
                 color:white;
                 border:none;
                 background-color: #263238;
@@ -407,11 +372,8 @@ $(document).ready(function(){
             }
             .btnd 
             {
-                
-             position: relative;
-               
-               
-           
+                z-index: auto
+                position: relative;
                 width:200px;
                 background-color: antiquewhite;
                 border: none;
@@ -466,8 +428,7 @@ $(document).ready(function(){
 
          
             }
-
->>>>>>> Added date and background selector
+            
         </style>
         
     </head>
@@ -477,11 +438,11 @@ $(document).ready(function(){
         <div class="nav">   
             
                 <div class="title">
-<<<<<<< HEAD
-                Apple Systems inc.
-=======
+
+        
+
                 Library System
->>>>>>> Added date and background selector
+
                 </div>
           
                 
@@ -501,13 +462,12 @@ $(document).ready(function(){
                     </div>
             
                 </div>
-<<<<<<< HEAD
-=======
+
             
                 <div class="time" id="navTime">
 
                 </div>
->>>>>>> Added date and background selector
+
         </div>
         <div class="submenu" id="sub">
             <h2>Settings</h2>
@@ -532,19 +492,17 @@ $(document).ready(function(){
                     <td>Password</td><td><input type="text" class="txt"></td>
                      </tr>
                 </table>
-<<<<<<< HEAD
-                <div class="btnSubmit">
-=======
+
                 <div class="btnSubmit" id="nvTime">
->>>>>>> Added date and background selector
+
                 Login
                 </div>
             </div>
          </div>
 
-<<<<<<< HEAD
+
         <script src="script.js"></script>
-=======
+
     
         
         <table class="tbl1">
@@ -556,9 +514,10 @@ $(document).ready(function(){
             <tr>
                 <td class="t">
                           <ul class="lst" id="lst">
-                <li><img src="btnArr.png" class="btnarr"> option 1</li>
-                <li><img src="btnArr.png" class="btnarr">  option 2</li>
-                <li><img src="btnArr.png" class="btnarr"> option 3</li>
+                <li id="bg1"><img src="btnArr.png" class="btnarr"> option 1</li>
+                <li id="bg2"><img src="btnArr.png" class="btnarr"> option 2</li>
+                <li id="bg3"><img src="btnArr.png" class="btnarr"> option 3</li>
+                <li id="bg4"><img src="btnArr.png" class="btnarr"> option 4</li>
               
             </ul>
 
@@ -588,8 +547,32 @@ $(document).ready(function(){
         var m=d.getMonth()+1;
         x.innerHTML =d.getFullYear()+" / "+m+" / "+d.getDate();
         
+                    
+                    document.getElementById("bg1").addEventListener("click",function()
+                                                                   {
+                      document.body.style.backgroundImage = "url('bg1.jpg')";
+                        
+                    });
+                    
+                             document.getElementById("bg2").addEventListener("click",function()
+                                                                   {
+                      document.body.style.backgroundImage = "url('bg2.jpg')";
+                        
+                    });
+                    
+                             document.getElementById("bg3").addEventListener("click",function()
+                                                                   {
+                      document.body.style.backgroundImage = "url('bg3.jpg')";
+                        
+                    });
+                    
+                             document.getElementById("bg4").addEventListener("click",function()
+                                                                   {
+                      document.body.style.backgroundImage = "url('bg4.jpg')";
+                        
+                    });
         </script>
->>>>>>> Added date and background selector
+
     </body>
 </html>
 
