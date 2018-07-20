@@ -3,6 +3,7 @@
     <head>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<<<<<<< HEAD
         <script> 
 $(document).ready(function(){
     $("#btnsettings").click(function(){
@@ -21,6 +22,33 @@ $(document).ready(function(){
     });
 });
             
+=======
+        
+
+        <script> 
+                $(document).ready(function(){
+        $("#btnli").click(function(){
+            $("#lst").slideToggle("fast");
+        });
+    });
+    $(document).ready(function(){
+        $("#btnsettings").click(function(){
+            $("#sub").slideToggle("fast");
+        });
+    });
+
+                $(document).ready(function(){
+        $("#btnLogin").click(function(){
+            $("#loginBack").slideToggle("fast");
+        });
+    });
+                    $(document).ready(function(){
+        $("#close").click(function(){
+            $("#loginBack").slideUp("slow");
+        });
+    });
+
+>>>>>>> Added date and background selector
             
 </script>
  
@@ -30,6 +58,10 @@ $(document).ready(function(){
         <style>
             @import url('https://fonts.googleapis.com/css?family=Quicksand');
             @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+<<<<<<< HEAD
+=======
+            @import url('https://fonts.googleapis.com/css?family=Imprima');
+>>>>>>> Added date and background selector
             body
             {
                 margin-top: 0;
@@ -203,9 +235,15 @@ $(document).ready(function(){
                 cursor: pointer;
                 padding-left: 10px;
                 height: 40px;
+<<<<<<< HEAD
               position: absolute;
                 width:10;
                 z-index: -1;
+=======
+                position: absolute;
+                width:10;
+                z-index:1;
+>>>>>>> Added date and background selector
 
                 
             }
@@ -291,7 +329,145 @@ $(document).ready(function(){
                 right:50px;
                 cursor: pointer;
             }
+<<<<<<< HEAD
             
+=======
+            .gallery .lst
+            {
+                z-index: -1;
+                position: absolute;
+                margin-top: 100px;
+                left:100px;
+                list-style: none;
+                font-family: 'Imprima';
+                
+                
+                
+
+            }
+            .btnarr
+            {
+                
+                width:25px;
+                display:inline-block;
+                position: relative;
+
+            }
+         
+     
+            .lst{
+                color:white;
+                border:none;
+                background-color: #263238;
+                position: absolute;
+                overflow:hidden;
+                box-sizing: content-box;
+                float:none;
+                width: 172px;
+                
+                 z-index: -1;
+                position: absolute;
+        
+   
+                list-style: none;
+                font-family: 'Imprima';
+           
+               
+                margin:0;
+               
+      
+
+            }
+            .lst > li
+            {
+                padding: 10px;
+                position: relative;
+                bottom: 10px;
+                font-size: 24px;
+                cursor: pointer;
+                -webkit-transition: text-shadow 0.5s;
+            
+                
+            }
+            .lst > li:hover
+            {
+                text-shadow: 2px 3px 6px;
+            
+            }
+         
+            
+     
+            {
+                width:20px;
+            }
+             .lst > li >img
+            {
+                vertical-align: middle;
+          
+            }
+            .btnd 
+            {
+                
+             position: relative;
+               
+               
+           
+                width:200px;
+                background-color: antiquewhite;
+                border: none;
+                height:30px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                box-sizing: content-box;
+                
+            }
+            .tbl1
+            {
+                position: relative;
+                border-style: solid;
+                align-content: center;
+                align-self: center;
+               float: right;
+                border:none;
+            
+                box-sizing: content-box;
+                padding: 0px;
+                margin: 0px;
+            }
+            .tbl1 t
+            {
+          
+                
+            }
+            .time
+            {
+                height:20px;
+                width:140px;;
+                font-family: 'Quicksand';
+                float: right;
+                position:relative;
+                bottom: 60px;
+                left:300px;
+                color:aliceblue;
+               
+                
+         
+            }
+                        .time:before
+            {
+           background-image: url(calendar.png);
+                background-size: 20px 20px;
+            display: inline-block;
+            width: 20px; 
+            height: 20px;
+            content:"";
+                vertical-align:bottom
+   
+
+         
+            }
+
+>>>>>>> Added date and background selector
         </style>
         
     </head>
@@ -301,7 +477,11 @@ $(document).ready(function(){
         <div class="nav">   
             
                 <div class="title">
+<<<<<<< HEAD
                 Apple Systems inc.
+=======
+                Library System
+>>>>>>> Added date and background selector
                 </div>
           
                 
@@ -321,6 +501,13 @@ $(document).ready(function(){
                     </div>
             
                 </div>
+<<<<<<< HEAD
+=======
+            
+                <div class="time" id="navTime">
+
+                </div>
+>>>>>>> Added date and background selector
         </div>
         <div class="submenu" id="sub">
             <h2>Settings</h2>
@@ -345,13 +532,64 @@ $(document).ready(function(){
                     <td>Password</td><td><input type="text" class="txt"></td>
                      </tr>
                 </table>
+<<<<<<< HEAD
                 <div class="btnSubmit">
+=======
+                <div class="btnSubmit" id="nvTime">
+>>>>>>> Added date and background selector
                 Login
                 </div>
             </div>
          </div>
 
+<<<<<<< HEAD
         <script src="script.js"></script>
+=======
+    
+        
+        <table class="tbl1">
+        <tr>
+            <td class="t">
+                  <input type="button" value="Backgrounds" id="btnli" class="btnd">
+            </td>
+        </tr>
+            <tr>
+                <td class="t">
+                          <ul class="lst" id="lst">
+                <li><img src="btnArr.png" class="btnarr"> option 1</li>
+                <li><img src="btnArr.png" class="btnarr">  option 2</li>
+                <li><img src="btnArr.png" class="btnarr"> option 3</li>
+              
+            </ul>
+
+                </td>
+            </tr>
+        </table>
+      
+
+      
+            
+            
+      
+        
+
+        <script src="script.js"></script>
+                <script>
+        
+         //  function myFunc()
+        //    {
+       //         a=document.getElementById("lst");
+       //         a.style.display="none";
+        //            //   document.getElementsByTagName("ul")[i].style.display="none";
+                    
+        //    }
+        x= document.getElementById("navTime");
+        var d=new Date();
+        var m=d.getMonth()+1;
+        x.innerHTML =d.getFullYear()+" / "+m+" / "+d.getDate();
+        
+        </script>
+>>>>>>> Added date and background selector
     </body>
 </html>
 
