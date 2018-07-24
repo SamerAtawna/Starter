@@ -1,6 +1,6 @@
 <?php  
    session_start();
-    $_SESSION['fname'] ="";
+
 
 ?>
 
@@ -424,7 +424,7 @@
                 float: right;
                 position:relative;
                 bottom: 60px;
-                left:260px;
+                left:400px;
                 color:aliceblue;
                 top: -55px;
 
@@ -473,7 +473,16 @@
                        
              }
 
-          
+             .Name::before
+             {
+                background-image: url(login.png);
+                background-size: 35px 35px;
+                display: inline-block;
+                width: 35px; 
+                height: 35px;
+                content:"";
+                vertical-align:middle;
+             }
             
         </style>
         
@@ -508,7 +517,7 @@
             
                 </div>
                 <div class="Name">
-              
+             <?php echo $_SESSION["Firstname"]." ".$_SESSION["Lastname"] ?> 
             </div>
                 <div class="time" id="navTime">
                      </div>
