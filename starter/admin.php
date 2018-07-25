@@ -10,7 +10,48 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<script>
+    function Show(){
+   
+    if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    request=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    request=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+    
+    
+    request.onreadystatechange = function()
+   {
+       if (request.readyState==4 && request.status == 200) {
+           document.getElementById("txt").innerHTML=request.responseText;
+   }
+}
+request.open("GET","ajax.php",true);
+request.send();
+}
 
+//Show live search results----------------------------------------------------------
+function Show1(str){
+   
+   if (window.XMLHttpRequest) {
+   // code for IE7+, Firefox, Chrome, Opera, Safari
+   request=new XMLHttpRequest();
+ } else {  // code for IE6, IE5
+   request=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+   
+   
+   request.onreadystatechange = function()
+  {
+      if (request.readyState==4 && request.status == 200) {
+          document.getElementById("txt").innerHTML=request.responseText;
+  }
+}
+request.open("GET","ajax.php?q="+str,true);
+request.send();
+} 
+</script>
 
         <script> 
             $(document).ready(function(){
@@ -482,7 +523,35 @@
                 height: 35px;
                 content:"";
                 vertical-align:middle;
+                
              }
+             .txtBox{
+                position: absolute;
+                top:200px;
+                left:300px;
+                align-items: center;
+                height:30px;
+                font-size: 22px;
+                border-radius: 5px;
+                border: 1px solid green;
+                text-align: center;
+            
+            }
+            .c{
+                
+                text-align: center;
+                position: absolute;
+                top:240px;
+                left:340px;
+                font-family:fantasy;
+                border:1px solid red;
+                width:200px;
+                border-radius: 5px;
+                height:200px;
+                
+            
+            
+            }
             
         </style>
         
@@ -530,7 +599,11 @@
             <h2>Settings</h2>
             <br>1 2 3 
         </div>
-         
+   
+         <input type="button" value="Ajax" onclick="Show()">
+         <br>
+         <input type="text" class="txtBox" onkeyup = "Show1(this.value)">
+         <div id="txt" class="c"> txt</div><br>
         <div class="login"  id="btnLogin">
                <img src="login.svg" class="imgLogin">
             </div>
