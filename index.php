@@ -44,6 +44,7 @@
        
         
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
             @import url('https://fonts.googleapis.com/css?family=Quicksand');
             @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
             @import url('https://fonts.googleapis.com/css?family=Imprima');
@@ -53,6 +54,7 @@
                 margin-top: 0;
                 margin-right: 0;
                 margin-left: 0;
+                background-image:url(background.jpg);
                 
              
                 
@@ -224,17 +226,16 @@
          
             .imgLogin
             {
+                display:inline-block;
                 cursor: pointer;
-                padding-left: 10px;
-                height: 40px;
+                padding-left: 40%;
+                height: 400px;
+                top:30%;
 
               position: absolute;
                 width:10;
                 z-index: -1;
 
-                position: absolute;
-                width:10;
-                z-index:1;
 
 
                 
@@ -472,7 +473,15 @@
             margin:0px;
                        
              }
-
+.login{
+    position:absolute;
+    color:white;
+    left:200px;
+    width:60%;
+    top:200px;
+    font-family:'Maven Pro';
+    font-size:32px;
+}
           
             
         </style>
@@ -523,7 +532,7 @@
         </div>
          
         <div class="login"  id="btnLogin">
-               <img src="login.svg" class="imgLogin">
+               Welcome to the library app, here you can<br> hire, view and read books!<br> to continue please click on the right image... <img src="login.svg" class="imgLogin">
             </div>
         <div class="loginBack" id="loginBack">
         <form action="2.php" method="post">
@@ -564,7 +573,7 @@
         </center>
     
         
-        <table class="tbl1">
+<!--        <table class="tbl1">
         <tr>
             <td class="t">
                   <input type="button" value="Backgrounds" id="btnli" class="btnd">
@@ -583,7 +592,7 @@
                 </td>
             </tr>
         </table>
-      
+      -->
 
       <br><br>
 

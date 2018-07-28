@@ -1,5 +1,20 @@
 <?php  
    session_start();
+if(($_SESSION["Firstname"]) == null){
+    header("Location: error.php");
+
+
+    function logout()
+    {
+
+        session_unset(); 
+        session_destroy();
+    }
+
+
+}
+
+
 
 
 ?>
@@ -9,7 +24,7 @@
 <html lang="en">
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
  
 //Show live search results----------------------------------------------------------
@@ -115,6 +130,7 @@ request.send();
             {
                 
             position: absolute;
+            z-index:5;
                 width:100%;
                 height:40%;
                 background: linear-gradient(#000000, #434343);
@@ -521,7 +537,7 @@ request.send();
             
             }
             .c{
-                
+                z-index:2;
                 text-align: center;
                 position: absolute;
                 left:340px;
@@ -533,7 +549,6 @@ request.send();
                 left:30%;
                top:25%;
                background-color: silver;
-               opacity:0.5;
                text-align: left;
                padding-left: 50px;
                padding-top: 10px;
@@ -591,6 +606,123 @@ request.send();
 
             
         }
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        .element{
+            position:absolute;
+            border:solid 1px black;
+            height:15%;
+            width:15%;
+            border-radius: 5px;
+            padding:5px;
+            border-color:silver;
+            font-family: 'Open Sans';
+            background-image: url('reportelement.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100px;
+            padding-left: 100px;
+            padding-top: 10px;
+            margin-top:170px;
+            margin-left:60px;
+            background-color:black;
+            color:white;
+            cursor:pointer;
+            -webkit-transition: background-size .2s, padding .2s;
+       
+
+            
+            
+  
+        }
+        .element:hover{
+       background-size:150px;
+       padding-left:150px;
+       
+        }
+        .element2{
+            position:absolute;
+            border:solid 1px black;
+            height:15%;
+            width:15%;
+            border-radius: 5px;
+            padding:5px;
+            border-color:silver;
+            font-family: 'Open Sans';
+            background-image: url('elementpermission.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100px;
+            padding-left: 100px;
+            padding-top: 10px;
+            margin-top:170px;
+            margin-left:600px;
+            background-color:black;
+            color:white;
+            cursor:pointer;
+            -webkit-transition: background-size .2s, padding .2s;
+       
+
+            
+            
+  
+        }
+        .element2:hover{
+       background-size:130px;
+       padding-left:150px;
+       
+        }
+
+
+               .element3{
+            position:absolute;
+            border:solid 1px black;
+            height:15%;
+            width:15%;
+            border-radius: 5px;
+            padding:5px;
+            border-color:silver;
+            font-family: 'Open Sans';
+            background-image: url('bookrent.ico');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100px;
+            padding-left: 100px;
+            padding-top: 10px;
+            margin-top:170px;
+            margin-left:1150px;
+            background-color:black;
+            color:white;
+            cursor:pointer;
+            -webkit-transition: background-size .2s, padding .2s;
+       
+
+            
+            
+  
+        }
+        .element3:hover{
+       background-size:130px;
+       padding-left:150px;
+       
+        }
+        ul{
+        
+        }
+        .element > p{text-align: center; }
+
+        @media screen and (max-width: 900px) {
+  div.hide {
+    display: none;
+  }
+        }
+        .logout{
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            vertical-align: middle;
+            cursor: pointer;
+            z-index:3;
+        }
         
         </style>
         
@@ -624,7 +756,7 @@ request.send();
                     </div>
                 </div>
                 <div class="Name">
-             <?php echo $_SESSION["Firstname"]." ".$_SESSION["Lastname"] ?> 
+           <a href="logout.php"> <img src="logout.png" class="logout"></a> <?php echo $_SESSION["Firstname"]." ".$_SESSION["Lastname"] ?> 
             </div>
                 <div class="time" id="navTime">
                      </div>
@@ -640,8 +772,54 @@ request.send();
    
      
          <br>
-         <input type="text" class="search" onkeyup = "Show1(this.value)">
+         <input type="text" class="search" placeholder="Book Search..." onkeyup = "Show1(this.value)">
          <div id="txt"> </div><br>
+<!-- elements 1-->
+<div class="element">REPORTS 
+    <ul>
+        <li>
+        Books report
+        </li>
+        <li>
+        Users report 
+        </li>
+        <li>
+        Special report      
+        </li>
+        </ul>
+    </div>
+    <!-- elements 2-->
+<div class="element2 hide">Permissions 
+    <ul>
+        <li>
+        Show permission
+        </li>
+        <li>
+        Edit permission
+        </li>
+        <li>
+        Add user     
+        </li>
+        </ul>
+    </div>
+
+        <!-- elements 3-->
+<div class="element3 hide">Rent books 
+    <ul>
+        <li>
+        Rent Books
+        </li>
+        <li>
+        Recieve books
+        </li>
+     
+        </ul>
+    </div>
+
+
+
+
+
         <div class="login"  id="btnLogin">
                <img src="login.svg" class="imgLogin">
             </div>
